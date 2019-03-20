@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "f318e83f-9a1c-45e9-a81a-7cf26ef57667",
+		"name": "reservations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "availability",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/campsites/availability",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"campsites",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservations/YGAMHEAXASSDLLVS9V0A/modify?checkinDate=05-12-2018&checkoutDate=08-12-2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservations",
+						"YGAMHEAXASSDLLVS9V0A",
+						"modify"
+					],
+					"query": [
+						{
+							"key": "checkinDate",
+							"value": "05-12-2018"
+						},
+						{
+							"key": "checkoutDate",
+							"value": "08-12-2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reserve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"email1@mail.com\", \"name\": \"name1\", \"surname\": \"surname1\", \"checkinDate\": \"01-01-2018\", \"checkoutDate\": \"01-03-2018\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservations/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservations",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"email1@mail.com\", \"name\": \"name1\", \"surname\": \"surname1\", \"checkinDate\": \"01-01-2018\", \"checkoutDate\": \"01-03-2018\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservations/V2MGXUDKPKL81GCQQHQV/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservations",
+						"V2MGXUDKPKL81GCQQHQV",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
